@@ -1,0 +1,38 @@
+
+@mixin title() {
+	text-transform: uppercase;
+	font-family: $title-ff;
+	color: $title-color;
+	font-size: 20px;
+	line-height: 1;
+	letter-spacing: .2em;
+	overflow: hidden;
+	max-height: calc(20px * 2);
+}
+
+@mixin subtitle() {
+	display: 	inline-block;
+	padding: 	40px 0 80px;
+	font-size: 14px;
+	line-height: 2;
+	letter-spacing: .05em;
+	overflow: hidden;
+	max-width: 480px	;
+	max-height: calc(14px * 4 * 2);	
+}
+// @mixin button() {
+// 	padding:13px 40px;
+// 	color:$secondary-color;
+// 	font-size:20px;
+// 	line-height:1.5;
+// 	font-weight:$text-weight;
+// 	font-family: $text-ff;
+// 	text-transform: uppercase;
+// 	-webkit-appearance:none;
+// 	overflow:hidden;
+// 	outline:none;
+// 	box-shadow:$shadow;
+// 	position: absolute;
+// 	left: 40%;
+// 	transition:all .1s ease .1s;
+// }
