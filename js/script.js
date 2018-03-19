@@ -3,7 +3,8 @@ $(document).ready(function(){
 					itemSelector: '.image',
 					masonry: {
 						columnWidth: '.image-sizer',
-						gutter: '.gutter-sizer'
+						gutter: '.gutter-sizer',
+						horizontalOrder: true
 					}
 				});
 
@@ -48,15 +49,31 @@ $(document).ready(function(){
         			});
 				})
 
+
+				function fixNav() {
+    			var $cache = $('.nav');
+    			if ($(window).scrollTop() < 100) {
+    			    $('.nav').removeClass('fixed');
+   				} else {
+    			  $('.nav').addClass('fixed');
+    			}
+   			
+  				}
+  				$(window).scroll(fixNav);
+  				fixNav();
+
+	})
+
 				 function initMap() {
-       				var uluru = {lat: -25.363, lng: 131.044};
+       				var center = {lat: 47.1013576, lng: 37.5483743};
         			var map = new google.maps.Map(document.getElementById('map'), {
-        			  zoom: 4,
-        			  center: uluru
+        			  zoom: 16,
+        			  center: center
         			});
         			var marker = new google.maps.Marker({
-        			  position: uluru,
-        			  map: map
+        			  position: center,
+        			  map: map,
+        			  icon: 'img/beetroot.svg',
+				  	  animation: google.maps.Animation.DROP
         			});
      			}
-			})
